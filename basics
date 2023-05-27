@@ -1,14 +1,37 @@
-# Update Python interpreter 
+# Update Python interpreter
 # Go to Python preferences -> Projects -> Project Folder -> Python interpreter
 
-# Run - Either select the file name or select the Current File. Python is case sensitive. 
+# Run - Either select the file name or select the Current File. Python is case sensitive.
 
 x = 152 + 100
 # this is variable x
 print(x)
 
-# Python has packages defined and we can import them to used function from packages. 
+# Python has packages defined, and we can import them to used function from packages.
 from math import sqrt
 
 x = 4
 print(sqrt(x))
+
+my_list1 = [1, 22, 3, 4, 5, 6, 11]  # it's a list
+my_list2 = list(range(1, 7))  # creating list from range of numbers 1 to 7 (goes to 7-1)
+my_list3 = list(range(1, 50, 5))  # list begin from 1, increment by 5 until it gets near to 50
+print(my_list1)
+print(my_list2)
+print(my_list3)
+print(my_list1[2])  # position starts from 0 then 1 then 2 so on
+print(my_list1[-2])  # last two positions, here it starts with 1 as -0 means nothing.
+print(my_list1[2:6])  # print from 3rd(0,1,2 which is 3) to (7-1).
+print(len(my_list1))
+print(max(my_list1))
+
+#  add an element to my_list1
+my_list1.append(88)
+print(my_list1)
+
+#  reverse list
+my_list1.reverse()
+print(my_list1)
+
+#  add two list together
+print(my_list1 + my_list2)

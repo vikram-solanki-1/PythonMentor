@@ -1,0 +1,12 @@
+# Data types int, float, string, boolean
+birth_year = input('Birthyear ? ')
+age = 2023 - int(birth_year)
+print(type(age))
+print(age)
+
+# Single quotes in middle of string
+course = "Python's course by Vikram"
+print(course)
+
+
+

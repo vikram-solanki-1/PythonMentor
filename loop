@@ -1,0 +1,47 @@
+my_list1 = [1, 2, 3, 4, 5, 6]  # it's a list
+#  add 5 to each element in the list
+for element in my_list1:
+    element = element + 5
+    print(element)
+# indent is needed so that it takes code as part of for loop.
+# Enters the loop with colon and exits the loop after indent is not present.
+
+#  IF loop - Else should not be indented and should have colon
+a = 15
+if a % 2 == 0:
+    print("a is divisible by 2")
+else:
+    print("not divisible by 2")
+
+#  While loop
+from random import randint
+moves = ["rock", "paper", "scissor"]
+while True:
+    computer = moves[randint(0,2)]
+    player = input("rock, paper or scissor? (or end the game)").lower()
+    if player == "end the game":
+        print("The game has ended")
+        break  # Breaks the while loop
+    elif player == computer
+        print("Tie")
+    elif player == "rock":
+        if computer == "paper"
+            print("You loose",computer,player)
+        else:
+            print("You win", player,computer)
+    elif player == "paper"
+        if computer == "scissor"
+            print("You loose", computer, player)
+        else:
+            print("You win", player, computer)
+    elif player == "scissor"
+        if computer == "rock"
+            print("You loose", computer, player)
+        else:
+            print("You win", player, computer)
+    else:
+        print("check your spelling")
+
+
+
+

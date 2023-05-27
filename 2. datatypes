@@ -39,6 +39,7 @@ print('Python' in course)
 print('python' in course)
 #  find return index and in returns the boolean value
 
+# Arithmetic Operations 
 
 # Data types int, float, string, boolean
 birth_year = input('Birthyear ? ')
@@ -46,7 +47,12 @@ age = 2023 - int(birth_year)
 print(type(age))
 print(age)
 
-# getting index from text
+
+/ # returns a float
+// # returns an int
+% # returns the remainder of division
+** # exponentiation - x ** y = x to the power of y
+
 
 
 

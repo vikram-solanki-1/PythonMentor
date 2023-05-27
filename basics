@@ -1,0 +1,14 @@
+#Update Python interpreter 
+#Go to Python preferences -> Projects -> Project Folder -> Python interpreter
+
+#Run - Either select the file name or select the Current File. Python is case sensitive. 
+
+x=152+100
+#this is variable x
+print(x)
+
+#Python has packages defined and we can import them to used function from packages. 
+from math import sqrt
+x = 4
+print(sqrt(x))
+

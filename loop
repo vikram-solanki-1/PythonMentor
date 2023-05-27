@@ -22,23 +22,23 @@ while True:
     if player == "end the game":
         print("The game has ended")
         break  # Breaks the while loop
-    elif player == computer
+    elif player == computer:
         print("Tie")
     elif player == "rock":
-        if computer == "paper"
-            print("You loose",computer,player)
+        if computer == "paper":
+            print("You loose", computer, "beats", player)
         else:
-            print("You win", player,computer)
-    elif player == "paper"
-        if computer == "scissor"
-            print("You loose", computer, player)
+            print("You win", player, "beats", computer)
+    elif player == "paper":
+        if computer == "scissor":
+            print("You loose", computer, "beats", player)
         else:
-            print("You win", player, computer)
-    elif player == "scissor"
-        if computer == "rock"
-            print("You loose", computer, player)
+            print("You win", player, "beats", computer)
+    elif player == "scissor":
+        if computer == "rock":
+            print("You loose", computer, "beats", player)
         else:
-            print("You win", player, computer)
+            print("You win", player, "beats", computer)
     else:
         print("check your spelling")
 

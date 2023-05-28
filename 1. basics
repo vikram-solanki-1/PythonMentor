@@ -24,6 +24,8 @@ print(my_list1[-2])  # last two positions, here it starts with 1 as -0 means not
 print(my_list1[2:6])  # print from 3rd(0,1,2 which is 3) to (7-1).
 print(len(my_list1))
 print(max(my_list1))
+my_list1[0] = 122.  #updates the value at 0 position
+print(my_list1)
 
 #  add an element to my_list1
 my_list1.append(88)
@@ -35,3 +37,12 @@ print(my_list1)
 
 #  add two list together
 print(my_list1 + my_list2)
+
+# max number in the list
+number = [11, 23, 34, 8, 89, 90]
+max_number = number[0]
+for values in number:
+    if values > max_number:
+        max_number = values
+print(max_number)
+

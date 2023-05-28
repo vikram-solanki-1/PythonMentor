@@ -46,3 +46,10 @@ for values in number:
         max_number = values
 print(max_number)
 
+# remove duplicate from list
+matrix = [11, 11, 23, 24, 23, 26, 27, 28]
+unique_matrix = []
+for values in matrix:
+    if values not in unique_matrix:
+        unique_matrix.append(values)
+print(unique_matrix)

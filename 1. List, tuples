@@ -86,6 +86,35 @@ tuple1= tuple(my_list1)
 my_list1 = tuple1      # We can convert list to tuple when we dont want list to be modifed anymore
 print(type(my_list1))
 
+#Nesting tuples in list
+my_list1 = [(1, 2, 3), (4, 5, 6)]
+print(my_list1)
+# if we create tuple inside list then we can update those.
+my_list1.append("Tuple")
+my_list1.append(("Tuple", "inside", "list"))
+print(my_list1)
+my_list1.remove("Tuple")
+print(my_list1)
+my_list1.remove((1, 2, 3))
+print(my_list1)
 
+#Nesting list int the tuple
+tuple1 = (['a', 'b', 'c'],['d', 'e', 'f'])
+print(tuple1)
+# we cant modify tuple, like add more list
+# but we can modify list inside a tuple
+tuple1[0].append('z')
+print(tuple1)
+tuple1[1].remove('d')
+print(tuple1)
 
+# Merge two tuples
+tuple3=tuple1+(1,)
+print(tuple3)
+
+# Unpacking tuples
+city1 = ('A', 'B', 'C')
+x, y, z = city1     # need to give exact numer of vairables as in tuple
+city1 = ['A', 'B', 'C']
+x, y, z = city1
 

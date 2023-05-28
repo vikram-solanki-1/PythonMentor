@@ -1,1 +1,21 @@
+def greet_user():      # without parameter
+    print('inside function')
+greet_user()
+print('outside function')
 
+
+def greet_user(first_name,last_name):   # since it has (name) parameter defined, when using this function a argument must be passed
+    print(f'Hi {first_name},{last_name}')
+greet_user("Vikram","Solanki")
+print('outside function')
+
+def greet_user(first_name,last_name):
+    print(f'Hi {first_name},{last_name}')
+greet_user(first_name="Vikram",last_name="Solanki") #Keyword argument for easy read of function
+print('outside function')
+
+def square(number):
+ print("number * number")
+result = square(2)
+print(result) # prints 4
+# why does this return None whereas the above function does not return None

@@ -53,6 +53,15 @@ print(age)
 % # returns the remainder of division
 ** # exponentiation - x ** y = x to the power of y
 
+#True/Fasle operator
+High_income = False
+Good_Credit = True
+missed_payments = True
+if High_income or Good_Credit and not missed_payments:
+    print("Eligible for loan")
+    
+ 
+
 
 
 

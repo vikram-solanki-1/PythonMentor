@@ -66,3 +66,17 @@ while True:
     else:
         print("check your spelling")  # after the else the program return to while and since while has no END condition it will keep getting executed
 
+
+# For loop
+ for item in 'Python':  # each iteration it will pick one itme at a time
+    print(item)
+
+for item in ['Nam1', 'Nam2', 'Nam3']:
+    print(item)
+
+for item in range(5, 10, 2):  # start from 5, skips 2 and print upto less than 10
+    print(item)
+    
+for x in range(4):
+    for y in range(3):
+        print(f'({x},{y})')

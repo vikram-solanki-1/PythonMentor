@@ -53,3 +53,39 @@ for values in matrix:
     if values not in unique_matrix:
         unique_matrix.append(values)
 print(unique_matrix)
+
+# Tuples
+city = "Pune"
+print(type(city))
+<class 'str'>
+
+city = "Pune",   # with a comma it becomes tuple, else its a vairable for string class
+print(type(city))
+<class 'tuple'>
+
+city1 = ('A', 'B', 'C')
+city2 = ('1', '2', '3')
+nested = (city1, city2)  # contains 2 tuples
+print(nested)
+print(city1[-1])
+print(city1[0])
+
+# Repetition
+rep = ("Python",)*5  # repeats value 5 times inside the tuple
+print(rep)
+print(rep*2)  # prints 10 times, but does not modify tuple
+
+# Slicing
+print(city1)
+print(city1[1:2])
+
+#Converting list to tuple
+my_list1 = [1, 22, 3, 4, 5, 6, 11]  # it's a list
+print(type(my_list1))
+tuple1= tuple(my_list1) 
+my_list1 = tuple1      # We can convert list to tuple when we dont want list to be modifed anymore
+print(type(my_list1))
+
+
+
+

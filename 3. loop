@@ -14,12 +14,18 @@ else:
     print("not divisible by 2")
     
 # while loop example
+i = 1
+while i < 5: # while breaks when it comes back to run while condition
+ print(i)
+ i += 1
+
 number = 1
-while number <4:
+while number < 6:
     print(number)
-    if number == 2:
-        break
+    if number == 4:
+        break    # while is forcefully breaked at certain condition in the while loop
     number = number + 1
+print("after while loop ended")
     
 # while loop with else example
 number = 1
@@ -29,11 +35,13 @@ while number <4:
 else:
     print("number is no longer less than 4")
 
+
 #  While loop
 from random import randint
+
 moves = ["rock", "paper", "scissor"]
 while True:
-    computer = moves[randint(0,2)]
+    computer = moves[randint(0, 2)]
     player = input("rock, paper or scissor? (or end the game)").lower()
     if player == "end the game":
         print("The game has ended")
@@ -56,8 +64,5 @@ while True:
         else:
             print("You win", player, "beats", computer)
     else:
-        print("check your spelling")
-
-
-
+        print("check your spelling")  # after the else the program return to while and since while has no END condition it will keep getting executed
 

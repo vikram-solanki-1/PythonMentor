@@ -201,12 +201,11 @@ print(cube.volume())
 #abstract method = a method that has a declaration but does not have an implementation.
 
 # prevents a user from creating an object of that class
-# + compels a user to override abstract methods in a child class
+# + compels a user to override abstract methods in a child class to make sure they dont miss creating this method
 
 from abc import ABC, abstractmethod
 
 class Vehicle(ABC):
-
     @abstractmethod
     def go(self):
         pass
@@ -216,18 +215,14 @@ class Vehicle(ABC):
         pass
 
 class Car(Vehicle):
-
     def go(self):
-        print("You drive the car")
-
-    def stop(self):
+        print("You drive the car")  #this method/fucntion is needed as its defined in abstact
+    def stop(self):                  # so we are ensuring not missing any essential implementation
         print("This car is stopped")
 
 class Motorcycle(Vehicle):
-
     def go(self):
         print("You ride the motorcycle")
-
     def stop(self):
         print("This motorcycle is stopped")
 
@@ -243,3 +238,37 @@ motorcycle.go()
 #vehicle.stop()
 car.stop()
 motorcycle.stop()
+
+
+# duck typing = concept where the class of an object is less important than the methods/attributes
+#               class type is not checked if minimum methods/attributes are present
+#               “If it walks like a duck, and it quacks like a duck, then it must be a duck.”
+
+class Duck:
+    def walk(self):
+        print("This duck is walking")
+
+    def talk(self):
+        print("This duck is qwuacking")
+
+class Chicken:
+    def walk(self):
+        print("This chicken is walking")
+
+    def talk(self):
+        print("This chicken is clucking")
+
+class Person():
+    def catch(self, duck):
+        duck.walk()
+        duck.talk()
+        print("You caught the critter!")
+
+
+duck = Duck()
+chicken = Chicken()
+person = Person()
+
+person.catch(chicken)
+
+

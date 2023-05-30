@@ -3,6 +3,8 @@ course = "Python's course by Vikram" #  text with single quote
 print(course)
 print(course[-1])
 print(course[3])
+# indexing = accessing elements of a sequence using [] (indexing operator)
+#                     [start : end : step]
 print(course[0:3])  # starts from 0 till 3 but excludes 3rd character
 print(course[2:])  # 0 to end
 print(course[:3])  #  be default it takes 0 for start position

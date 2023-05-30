@@ -98,4 +98,6 @@ shipping_label("Dr.", "Spongebob", "Squarepants",
                state="MI",
                zip="54321")
 
+# variable scope resolution  priority order 1. Local -> 2. Encloded -> 3. Global -> built in
+
 

@@ -147,3 +147,11 @@ store_euros = list(map(to_euros, store))
 for i in store_euros:
     print(i)
 # ---------------------------------------------------------------------------------------------------------------
+
+# FILTER FUNCTION--------------------------------------
+# filter() =    creates a collection of elements from an iterable,
+#               for which a function returns true
+#
+#               filter(function, iterable)
+
+

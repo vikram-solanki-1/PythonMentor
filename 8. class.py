@@ -337,3 +337,83 @@ janet.print_encap()
 #Similary changing janet's doesn't affect brad's variable.
 brad.print_encap()
 
+####################################################################################
+######### class detailed example ###################
+class Employee:
+    def __init__(self, first, last, pay):
+        self.first = first
+        self.last = last
+        self.pay = pay
+        self.email = first + '.' + last + '@company.com'
+
+    def fullname(self):  # if we leave it blank without (self) it will give error --> Employee.fullname() takes 0 positional arguments but 1 was given
+        # when fullname get called later, (Self) will be passed by default as argument, so, (self) is required to handle it.
+        return '{} {}'.format(self.first, self.last)
+
+emp_1 = Employee('Vikram', 'Solanki', 100000)
+
+print(emp_1)  # its gives the class type object
+print(emp_1.email)  # prints the attribute values
+print(emp_1.fullname())  # since fullname is function we need () to get return captured.
+print(Employee.fullname(emp_1))  # we can directly call parent class but we need to pass values via instance emp_1
+print(emp_1.fullname())  # since fullname is function we need () to get return captured.
+### result
+# <__main__.Employee object at 0x101480a50>
+# Vikram.Solanki@company.com
+# Vikram Solanki
+# Vikram Solanki
+
+
+class Employee:
+    raise_amount = 1.1
+    num_of_emp = 0
+    def __init__(self, first, last, pay):
+        self.first = first
+        self.last = last
+        self.pay = pay
+        self.email = first + '.' + last + '@company.com'
+        Employee.num_of_emp += 1  # since INIT method runs each time we create emp object, the count will increase
+
+    def fullname(self):  # if we leave it blank without (self) it will give error --> Employee.fullname() takes 0 positional arguments but 1 was given
+        # when fullname get called later, (Self) will be passed by default as argument, so, (self) is required to handle it.
+        return '{} {}'.format(self.first, self.last)
+
+    def apply_raise(self):
+        return int(self.pay * self.raise_amount)
+        # using self.pay will allow to use specific raise amount for that instance ELSE it will take CLASS variable value
+        # self.pay = int(self.pay*1.1)  # if we want to print attribute
+       # return int(self.pay*raise_amount) # this will give error as we need to call class variable using CLASS or CLASS instance
+
+emp_1 = Employee('Vikram', 'Solanki', 100000)
+emp_2 = Employee('Vikram2', 'Solanki2', 200000)
+
+print(emp_1.pay)  # prints the attribute values
+print(emp_1.apply_raise()) # function is called
+print(emp_1.raise_amount)
+print(Employee.num_of_emp)
+
+# 100000
+# 110000
+# 1.1
+# 2
+
+
+######## REGULAR METHOD, CLASS METHOD & STATIC METHODS ####################
+# Regular - automatically takes self as the first argument, which means it takes instance/class as first argument 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -3,7 +3,11 @@ def greet_user():      # without parameter
 greet_user()
 print('outside function')
 
-
+for i in range(2,4):  # instead of list for in in [1,2,3,4] use range
+    print("hi")
+ 
+for _ in range(2,4):   # since we are never using the variable i, so we can replace it with single underscore
+    print("hi")
 
 
 def greet_user(first_name,last_name):   # since it has (name) parameter defined, when using this function a argument must be passed

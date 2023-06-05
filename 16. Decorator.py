@@ -104,7 +104,7 @@ decorated_display_variable = decorator_func(display)
 decorated_display_variable() # when wrapper function is executed, it in truns executes the display function.
 
 
-# @ decorator
+# -------------  @ decorator --------------------------
 def decorator_func(original_func):  # passing function as parameter
     def wrapper_func():
         print('Wrapper function executed before {}'.format(original_func.__name__))
@@ -117,6 +117,30 @@ def display():
 
 display() # it first goes inside decorator_func and then get executed there.
 # if we remove the @decorated function then display function will execute and decorator_func will not execute
+
+
+#------------- @ decorator with multiple arguments ---------------------
+def decorator_func(original_func):  # passing function as parameter
+    def wrapper_func(*args, **kwargs):
+        print('Wrapper function executed before {}'.format(original_func.__name__))
+        return original_func(*args, **kwargs)  # executing parameter function and returning output
+    return wrapper_func
+
+@decorator_func  # function will be passed as input to decorator_func and then its fate lies there
+def display():
+    print('This is parameter function, it will be executed in wrapper function')
+
+display() # it first goes inside decorator_func and then get executed there.
+# if we remove the @decorated function then display function will execute and decorator_func will not execute
+
+print("--------gap between second decorator function-------")
+
+# @decorator_func this will cause issue as wrapper_func takes 0 args, but we are passing 2 args here.
+# so we need to modify wrapper_func to take more args
+@decorator_func
+def display_info(name,age):
+    print('display info ran with arguments {} {}'.format(name,age))
+display_info('vikram',38) # now this function first goes into decorator_func and then into wraper func and then executes
 
 
 

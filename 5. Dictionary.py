@@ -1,10 +1,4 @@
-customer = {
-    "name": "Vikram",
-    "age": 39,
-    "is_verified": True
-}
-print(customer["name"])
-print(customer.get("Name","default name"))
+
 
 # A Dictionary is a collection which is unordered, changeable and indexed. No duplicate members.
 

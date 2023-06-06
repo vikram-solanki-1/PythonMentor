@@ -1,3 +1,34 @@
+# ------------Read-File--------------
+with open('copy.txt') as file_1:   # with open will close file automatically after function is done.
+    print(file_1.read())
+    
+## using file name as variable
+filename = 'copy.txt'
+with open(filename) as f_obj:
+    contents = f_obj.read()
+print(contents)
+#-- from location
+f_path = "/Users/applemacbookair/Desktop/PyCharm123/copy.txt"
+with open(f_path) as f_obj:
+    content = f_obj.read()
+print(content.rstrip())
+
+# ------------Write-File--------------
+filename = 'copy.txt'
+with open(filename, 'w') as f_obj:     # with open(filename, 'a') as f_obj: for appending the file
+    f_obj.write("I am liking programming\n")
+    f_obj.write("I 2 liking programming\n")
+    f_obj.write("I 3 liking programming")
+with open(filename) as f_r:
+    content = f_r.read()
+print(content)
+
+#---anither write
+text = "hi i am writing on this file\nThis is some text\nHave a good one!\n"
+with open('copy.txt','w') as file:
+    file.write(text)
+
+# ------------check-File--------------
 import os
 path = "/Users/applemacbookair/Desktop/PyCharm123/test.txt"
 
@@ -9,10 +40,7 @@ if os.path.exists(path):
         print("That is a directory!")
 else:
     print("That location doesn't exist!")
-
-# read file data
-with open('/Users/applemacbookair/Desktop/PyCharm123/test.txt') as file_1:   # with open will close file automatically after function is done. 
-    print(file_1.read())
+    
  
  # exception handling
  try:
@@ -20,19 +48,7 @@ with open('/Users/applemacbookair/Desktop/PyCharm123/test.txt') as file_1:   # w
         print(file.read())
 except FileNotFoundError:
     print("That file was not found :(")
-    
-  with open('/Users/applemacbookair/Desktop/PyCharm123/test.txt') as file_1:
-    print(file_1.read())
-
-text = "hi i am writing on this file\nThis is some text\nHave a good one!\n"
-with open('test.txt','w') as file:
-    file.write(text)
-    
-text = "\nappend the file\nThis is some text!\n"
-with open('test.txt', 'a') as file_2:
-    file_2.write(text)
-with open('/Users/applemacbookair/Desktop/PyCharm123/test.txt') as file_2:
-    print(file_2.read())
+ # -----------------
 
 
 # copyfile() =  copies contents of a file
@@ -77,31 +93,7 @@ except OSError:
 else:
     print(path+" was deleted")
 
-    -----------
-    # Python has functions for creating, reading, updating, and deleting files.
-
-# Open a file
-myFile = open('myfile.txt', 'w')
-
-# Get some info
-print('Name: ', myFile.name)
-print('Is Closed : ', myFile.closed)
-print('Opening Mode: ', myFile.mode)
-
-# Write to file
-myFile.write('I love Python')
-myFile.write(' and JavaScript')
-myFile.close()
-
-# Append to file
-myFile = open('myfile.txt', 'a')
-myFile.write(' I also like PHP')
-myFile.close()
-
-# Read from file
-myFile = open('myfile.txt', 'r+')
-text = myFile.read(100)
-print(text)
+   
    
    
     

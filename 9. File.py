@@ -1,6 +1,10 @@
 # ------------Read-File--------------
 with open('copy.txt') as file_1:   # with open will close file automatically after function is done.
     print(file_1.read())
+#----
+content = open('copy.txt','r')
+print(content.read())
+content.close()
     
 ## using file name as variable
 filename = 'copy.txt'

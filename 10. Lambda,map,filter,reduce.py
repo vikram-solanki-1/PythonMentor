@@ -74,6 +74,6 @@ def add(x, y):
    return x+y
    
 reducing_the_l1 = reduce(add, l1) # REDUCE FUNCTION IS USED FOR DOING MATHEMATICAL OPERATIONS IN A LIST
-# HERE, WE ARE ADDING ALL THE CHARACTERS THE LIST l1 
+# HERE, WE ARE ADDING ALL THE CHARACTERS LIST l1 
 
 print(reducing_the_l1)

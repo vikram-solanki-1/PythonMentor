@@ -5,7 +5,7 @@ print(f'hello {name}')
 # Strings in python are surrounded by either single or double quotation marks. Let's look at string formatting and some string methods
 
 name = 'Brad'
-age = 37
+age = 39
 
 # Concatenate
 print('Hello, my name is ' + name + ' and I am ' + str(age))

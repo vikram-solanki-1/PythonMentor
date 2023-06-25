@@ -25,7 +25,7 @@ car_1 = Car("Chevy", "Corvette", 2021, "blue")  # car1 object created with argum
 car_2 = Car("Ford", "Mustang", 2022, "red")
 
 
-# --------------
+# -----if car module is defined---------
 from car import Car
 
 car_1 = Car("Chevy","Corvette",2021,"blue")
@@ -58,7 +58,10 @@ class Fish(Animal):
 class Hawk(Animal):
     def fly(self):
         print("This hawk is flying")
-        
+
+Hawk.fly()  # this will throw error because it needs exactly 1 argument.
+Hawk.fly('hi') # this will execute Hawk method
+
 rabbit = Rabbit()
 fish = Fish()
 hawk = Hawk()
@@ -69,7 +72,7 @@ hawk.sleep()
 
 rabbit.run()
 fish.swim()
-hawk.fly()
+Hawk.fly()
 
 
 # ------multi-level inheritance = when a derived (child) class inherits another derived (child) class
@@ -271,8 +274,6 @@ person = Person()
 
 person.catch(chicken)
 
-#--- will add more class details later. 
-
 # A class is like a blueprint for creating objects. An object has properties and methods(functions) associated with it. Almost everything in Python is an object
 
 # Create class
@@ -280,12 +281,12 @@ class User:
 
   # Constructor
   def __init__(self, name, email, age):
-    self.name = name
-    self.email = email
-    self.age = age
-    
-    # Adding Encapsulation of variables... Encapsulation is the concept of making the variables non-accessible or accessible upto some extent from the child classes
-    self._private = 1000 # Encapsulated variables are declares with '_' in the constructor.
+      self.name = name
+      self.email = email
+      self.age = age
+
+      # Adding Encapsulation of variables... Encapsulation is the concept of making the variables non-accessible or accessible upto some extent from the child classes
+      self._private = 1000 # Encapsulated variables are declares with '_' in the constructor.
 
   def greeting(self):
       return f'My name is {self.name} and I am {self.age}'

@@ -1,21 +1,30 @@
-class Car:
+# duck typing = concept where the class of an object is less important than the methods/attributes
+#               class type is not checked if minimum methods/attributes are present
+#               “If it walks like a duck, and it quacks like a duck, then it must be a duck.”
 
-    wheels = 4  # class variable
+class Duck:
+    def walk(self):
+        print("This duck is walking")
 
-    def __init__(self, make, model, year, color): # attributes are passed as argument.
-        self.make = make  # we can assign self.make value received from argument make
-        self.model = model    # instance variable
-        self.year = year
-        self.color = color
+    def talk(self):
+        print("This duck is qwuacking")
 
-    def drive(self):
-        print("This " + self.model + " is driving")
+class Chicken:
+    def walk(self):
+        print("This chicken is walking")
 
-    def stop(self):
-        print("This " + self.model + " is stopped")
+    def talk(self):
+        print("This chicken is clucking")
+
+class Person():
+    def catch(self, duck):
+        duck.walk()
+        duck.talk()
+        print("You caught the critter!")
 
 
-car_1 = Car("Chevy", "Corvette", 2021, "blue")  # car1 object created with arguments passed to it.
-car_2 = Car("Ford", "Mustang", 2022, "red")
+duck = Duck()
+chicken = Chicken()
+person = Person()
 
-car_1.drive()
+person.catch(duck)

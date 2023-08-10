@@ -3,7 +3,7 @@ def double(x):
     return x * 2
 print(double(3))
 
-y = lambda x: x * 2  # pass on the variable before colon, it will return values after the colon
+y = lambda x: x * 2  # pass on the variable before colon, it will return values after the colon.
 print(y(4))
 
 z = lambda x, y: x + y if x > y else 0
